@@ -1,5 +1,84 @@
+@import url('https://fonts.googleapis.com/css2?family=Playfair:ital,opsz,wght@0,5..1200,300..900;1,5..1200,300..900&family=Quicksand:wght@300..700&display=swap');
+
+
+
+
 * {
     margin: 0;
     padding: 0;
     box-sizing: 0;
 }
+
+html {
+    scroll-behavior: smooth;
+}
+
+:root {
+    --primary: #4F772D;
+    --secondary: #31572C;
+    --accent: #F7F3E3;
+
+    /* Font size */
+    --font-size-s: 0.9rem;
+    --font-size-n: 1rem;
+    --font-size-m: 1.12rem;
+    --font-size-l: 1.5rem;
+    --font-size-xl: 2rem;
+    --font-size-xxl: 2.3rem;
+
+    /* Font weight */
+    --font-weight-normal: 400;
+    --font-weight-medium: 500;
+    --font-weight-semibold: 600;
+    --font-weight-bold: 700;
+
+    /* Border radius */
+    --border-radius-s: 8px;
+    --border-radius-m: 30px;
+    --border-radius-circle: 50%;
+
+    /* Site max width */
+    --site-max-width: 1300px;
+}
+
+ul {
+    list-style: none;
+}
+
+a {
+    text-decoration: none;
+}
+
+body{
+    background: var(--accent);
+}
+
+
+
+header {
+    position: fixed;
+    width: 100%;
+    /* background: var(--primary); */
+}
+
+header .section-content {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 20px;
+}
+
+.section-content .nav-menu {
+    display: flex;
+    gap: 30px;
+}
+
+.section-content .logo {
+    color: var(--secondary);
+    font-weight: var(--font-weight-semibold);
+    font-size: var(--font-size-l);
+}
+
+
+
+
