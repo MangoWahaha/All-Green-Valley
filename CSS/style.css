@@ -53,6 +53,7 @@ html {
 
 body{
     background: var(--50);
+    color: var(--900);
 }
 
 a {

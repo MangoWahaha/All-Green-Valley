@@ -1,12 +1,12 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Shop</title>
 
     <!-- Styles -->
-    <link rel="stylesheet" href="CSS/style.css" />
+    <link rel="stylesheet" href="../CSS/shop.css" />
 
     <!-- Icons -->
     <link
@@ -19,33 +19,44 @@
       rel="stylesheet"
       href="https://fonts.googleapis.com/css2?family=Playfair:ital,opsz,wght@0,5..1200,300..900;1,5..1200,300..900&family=Quicksand:wght@300..700&display=swap"
     />
-</head>
+  </head>
 
-<body>
-    <!-- Navbar -->
+  <body>
+    <!-- Navigation Bar -->
     <nav class="navbar">
-      <nav class="navbar-brand">
+      <div class="navbar-brand">
         <a href="#logo">All Green Valley</a>
-      </nav>
+      </div>
 
-      <nav class="navbar-nav">
+      <div class="navbar-nav">
         <a href="#">Home</a>
         <a href="#shop">Shop</a>
         <a href="#about">About Us</a>
-      </nav>
+      </div>
 
-      <nav class="navbar-nav-nav">
-        <a href="#search"><i class="fa-solid fa-magnifying-glass"></i></a>
+      <div class="navbar-nav-nav">
+        <div class="navbar-search">
+          <i class="fa-solid fa-magnifying-glass"></i>
+          <input type="text" class="search-input" placeholder="Search" />
+        </div>
         <a href="#cart"><i class="fa-solid fa-bag-shopping"></i></a>
         <a href="#profile"><i class="fa-solid fa-user"></i></a>
-      </nav>
+      </div>
     </nav>
 
-    <footer>
-        &copy; 2025 All Green Valley. All rights reserved.
-    </footer>
+    <header>
+      <div class="description">
+        <h1>Plants Make People Happy</h1>
+        <p>
+          Shop our plants, care accessories, and more delivered to your door
+          happiness guaranteed.
+        </p>
+      </div>
+    </header>
+
+    <footer>&copy; 2025 All Green Valley. All rights reserved.</footer>
 
     <!-- Java Script -->
     <script src="JS/script.js"></script>
-</body>
+  </body>
 </html>
