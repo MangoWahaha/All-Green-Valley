@@ -4,10 +4,6 @@
     box-sizing: border-box;
 }
 
-html {
-    scroll-behavior: smooth;
-}
-
 :root {
     /* Main color */
     --primary: #4F772D;
@@ -50,14 +46,18 @@ html {
     --site-max-width: 1300px;
 }
 
-a {
-    text-decoration: none;
+html {
+    scroll-behavior: smooth;
 }
+
 
 body{
     background: var(--50);
 }
 
+a {
+    text-decoration: none;
+}
 
 /* Navigation Bar */
 .navbar{
@@ -80,8 +80,6 @@ body{
     display: flex;
     gap: 10px;
 }
-
-
 
 /* Header */
 header  {
