@@ -54,9 +54,54 @@
       </div>
     </header>
 
+    <!-- Category Sorting -->
+    <section class="selector">
+      <!-- Category -->
+      <div class="category">
+        <div class="dropdown-toggle" id="dropdownToggle">
+          <div class="list">
+            <span>Category</span>
+            <span class="arrow">&#9662;</span>
+          </div>
+          <div class="overlay"></div>
+          <div class="shadow"></div>
+        </div>
+
+        <div class="menu" id="menu">
+          <label>
+            <input type="checkbox" value="indoor" /> Indoor Plants
+          </label>
+
+          <label>
+            <input type="checkbox" value="outdoor" /> Outdoor Plants
+          </label>
+
+          <label> <input type="checkbox" value="pots" /> Plant's Pots </label>
+        </div>
+      </div>
+
+      <!-- Sort By -->
+      <div class="sorting">
+        <div class="dropdown-toggle" id="sortToggle">
+          <span>Sort By</span>
+          <span class="arrow">&#9662;</span>
+          <div class="overlay"></div>
+          <div class="shadow"></div>
+        </div>
+
+        <div class="menu" id="sortMenu">
+          <label data-value="new">New Arrival</label>
+          <label data-value="populer">Popular</label>
+          <label data-value="smallest">Low to High Price</label>
+          <label data-value="biggest">High to Low Price</label>
+        </div>
+      </div>
+    </section>
+
+    <!-- Footer -->
     <footer>&copy; 2025 All Green Valley. All rights reserved.</footer>
 
     <!-- Java Script -->
-    <script src="JS/script.js"></script>
+    <script src="../JS/shop.js"></script>
   </body>
 </html>
