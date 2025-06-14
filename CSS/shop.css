@@ -156,7 +156,7 @@ header .description p {
   border-radius: 2px;
   position: relative;
   background: var(--primary);
-  color: var(--50);
+  color: var(--400);
   perspective: 800px;
 }
 
@@ -165,14 +165,14 @@ header .description p {
   justify-content: space-between;
 }
 
-.dropdown-toggle {
+.category-toggle {
   position: relative;
   display: block;
   border: 0;
   width: 100%;
   padding: 1em;
   outline: none;
-  color: #fff;
+  color: var(--50);
   background: var(--primary);
   box-sizing: border-box;
   transform-style: preserve-3d;
@@ -183,7 +183,7 @@ header .description p {
   cursor: pointer;
 }
 
-.dropdown-toggle .overlay {
+.category-toggle .overlay {
   width: 100%;
   height: 100%;
   position: absolute;
@@ -198,7 +198,7 @@ header .description p {
   pointer-events: none;
 }
 
-.dropdown-toggle .shadow {
+.category-toggle .shadow {
   position: absolute;
   height: 15px;
   width: 100%;
@@ -215,7 +215,7 @@ header .description p {
   pointer-events: none;
 }
 
-.dropdown-toggle::before {
+.category-toggle::before {
   content: '';
   display: inline-block;
   font-family: FontAwesome;
@@ -226,15 +226,15 @@ header .description p {
   vertical-align: middle;
 }
 
-.category:hover .dropdown-toggle,
-.category.opened .dropdown-toggle {
+.category:hover .category-toggle,
+.category.opened .category-toggle {
   transform: rotate3d(1, 0, 0, 60deg);
 }
 
-.category:hover .dropdown-toggle .overlay,
-.category.opened .dropdown-toggle .overlay,
-.category:hover .dropdown-toggle .shadow,
-.category.opened .dropdown-toggle .shadow {
+.category:hover .category-toggle .overlay,
+.category.opened .category-toggle .overlay,
+.category:hover .category-toggle .shadow,
+.category.opened .category-toggle .shadow {
   opacity: 1;
 }
 
@@ -274,20 +274,112 @@ header .description p {
 
 .menu label:hover {
   background-color: #16a085;
-  color: #fff;
+  color: var(--50);
   transform: scale(1.05);
   border-radius: 4px;
 }
 
 .menu input[type="checkbox"] {
-  accent-color: #1abc9c;
+  accent-color: var(--50);
   width: 16px;
   height: 16px;
   cursor: pointer;
 }
 
 /* Sort By */
+.sorting {
+  width: 200px;
+  border-radius: 2px;
+  position: relative;
+  background: var(--primary);
+  color: var(--400);
+  perspective: 800px;
+}
 
+.sort-toggle {
+  position: relative;
+  display: block;
+  border: 0;
+  width: 100%;
+  padding: 1em;
+  outline: none;
+  color: var(--50);
+  background: var(--primary);
+  box-sizing: border-box;
+  transform-style: preserve-3d;
+  transform-origin: 50% 0%;
+  transition: transform 0.3s;
+  border-radius: 2px;
+  z-index: 99;
+  cursor: pointer;
+}
+
+.sort-toggle .overlay {
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  left: 0;
+  top: 0;
+  background: linear-gradient(
+    to bottom,
+    rgba(0, 0, 0, 0.35) 0%,
+    rgba(0, 0, 0, 0.1) 100%
+  );
+  opacity: 0;
+  pointer-events: none;
+}
+
+.sort-toggle .shadow {
+  position: absolute;
+  height: 15px;
+  width: 100%;
+  left: 0;
+  bottom: -15px;
+  transform-origin: center bottom;
+  transform: scale(0.95, 1) translate3d(0, 0px, 0);
+  background: linear-gradient(
+    to bottom,
+    rgba(0, 0, 0, 0.75) 0%,
+    rgba(0, 0, 0, 0) 100%
+  );
+  opacity: 0;
+  pointer-events: none;
+}
+
+.sort-toggle::before {
+  content: '';
+  display: inline-block;
+  font-family: FontAwesome;
+  font-style: normal;
+  font-weight: normal;
+  line-height: 1.5;
+  float: right;
+  vertical-align: middle;
+}
+
+.sorting:hover .sort-toggle,
+.sorting.opened .sort-toggle {
+  transform: rotate3d(1, 0, 0, 60deg);
+}
+
+.sorting:hover .sort-toggle .overlay,
+.sorting.opened .sort-toggle .overlay,
+.sorting:hover .sort-toggle .shadow,
+.sorting.opened .sort-toggle .shadow {
+  opacity: 1;
+}
+
+.sorting:hover .menu,
+.sorting.opened .menu {
+  height: fit-content;
+  opacity: 1;
+}
+
+.menu label.active {
+  background-color: #16a085;
+  color: var(--50);
+  border-radius: 4px;
+}
 
 /* Footer */
 footer {
