@@ -3,7 +3,7 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <link rel="stylesheet" type="text/css" href="style.css" />
+
     <title>All Green Valley</title>
 
     <!-- Styles -->
@@ -25,12 +25,17 @@
         rel="stylesheet" 
         href="https://fonts.googleapis.com/css2?family=Quicksand:wght@300..700&display=swap" 
     />
-  </head>
-  
+
+    <!--We swipe swipe! :D -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css">
+    <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
+
+</head>                             
   <body>
     <!-- Navbar -->
     <nav class="navbar">
       <nav class="navbar-brand">
+        <img src="IMG/Logo.png" alt="Logo">
         <a href="#logo">All Green Valley</a>
       </nav>
 
@@ -41,7 +46,10 @@
       </nav>
 
       <nav class="navbar-nav-nav">
-        <a href="#search"><i class="fa-solid fa-magnifying-glass"></i></a>
+        <div class="navbar-search">
+            <i class="fa-solid fa-magnifying-glass"></i>
+            <input type="text" class="input-search" placeholder="Search">
+        </div>
         <a href="#cart"><i class="fa-solid fa-bag-shopping"></i></a>
         <a href="#profile"><i class="fa-solid fa-user"></i></a>
       </nav>
@@ -114,9 +122,54 @@
                 </div>
             </div>
         </div>
-    </section
+    </section>
 
-    <section></section>
+    <section class="section-content-2">
+        <div class="section-content-2-desc">
+            <h2 class="section-content-2-desc-title">Most Popular</h2>
+            <p class="section-content-2-desc-para">Experience our top-rated product — expertly made with a focus on durability, sustainability, and elegance. A great fit for plant lovers who value both aesthetics and functionality.</p>
+        </div>
+        <div class="swiper">
+            <div class="swiper-wrapper">
+            <!-- Slide 1 -->
+            <div class="swiper-slide section-content-2-box-2">
+                <img src="/IMG/birds-nest-plant-beige-pot-removebg-preview.png" alt="" class="images" />
+                <h4 class="section-content-2-box-2-names">Bird’s Nest Fern</h4>
+            </div>
+            <!-- Slide 2 -->
+            <div class="swiper-slide section-content-2-box-2">
+                <img src="/IMG/fiddle-leaf-fig-plant-pot-removebg-preview.png" alt="" class="images" />
+                <h4 class="section-content-2-box-2-names">Fiddle Leaf Fig</h4>
+            </div>
+            <!-- Slide 3 -->
+            <div class="swiper-slide section-content-2-box-2">
+                <img src="/IMG/faux-watermelon-peperomia-plant-terracotta-pot-home-decor-removebg-preview.png" alt="" class="images" />
+                <h4 class="section-content-2-box-2-names">Watermelon Peperomia</h4>
+            </div>
+            <!-- Slide 4 -->
+            <div class="swiper-slide section-content-2-box-2">
+                <img src="/IMG/andrew-reshetov-f8tr3-MJzhc-unsplash-removebg-preview.png" alt="" class="images" />
+                <h4 class="section-content-2-box-2-names">Pilea</h4>
+            </div>
+            <!-- Slide 5 -->
+            <div class="swiper-slide section-content-2-box-2">
+                <img src="/IMG/stephanie-harvey-T0inbt7nRME-unsplash-removebg-preview.png" alt="" class="images" />
+                <h4 class="section-content-2-box-2-names">Aloe Vera</h4>
+            </div>
+            <!-- Slide 6 -->
+            <div class="swiper-slide section-content-2-box-2">
+                <img src="/IMG/peace-lily-plant-terracotta-pot-home-decor-object-removebg-preview.png" alt="" class="images" />
+                <h4 class="section-content-2-box-2-names">Philodendron Birkin</h4>
+            </div>
+        </div>
+
+    <!-- Navigation & Pagination -->
+    <div class="swiper-pagination"></div>
+    <div class="swiper-button-prev"></div>
+    <div class="swiper-button-next"></div>
+  </div>
+</section>
+    </section>  
 
     <!-- Footer -->
     <footer>
@@ -125,5 +178,8 @@
 
     <!-- Java Script -->
     <script src="JS/script.js"></script>
+    
+    
   </body>
+
 </html>
