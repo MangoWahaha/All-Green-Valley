@@ -1,0 +1,60 @@
+/* Navigation Bar */
+.navbar {
+  display: flex;
+  align-items: center;
+  padding: 20px 32px;
+  z-index: 9999;
+  width: 100%;
+  justify-content: space-between;
+  align-items: center;
+  position: fixed;
+  background: rgb(250, 250, 250, 0.5);
+  /* border-bottom: 1px solid var(--primary); */
+}
+
+.navbar-brand {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  font-size: var(--font-size-m);
+}
+
+.navbar-brand img {
+  width: 3rem;
+}
+
+.navbar .navbar-nav {
+  display: flex;
+  gap: 20px;
+  align-items: center;
+}
+
+.navbar .navbar-nav-nav {
+  display: flex;
+  gap: 10px;
+  align-items: center;
+  font-size: var(--font-size-m);
+}
+
+.navbar .navbar-nav-nav .navbar-search {
+  position: relative; /* penting! biar icon bisa absolute terhadap sini */
+  display: flex;
+  align-items: center;
+}
+
+.navbar .navbar-nav-nav .navbar-search .fa-solid {
+  position: absolute;
+  left: 10px;
+  top: 50%;
+  transform: translateY(-50%);
+  font-size: var(--font-size-s);
+}
+
+.navbar .navbar-nav-nav .navbar-search .search-input {
+  padding: 10px 10px 10px 35px;
+  font-size: var(--font-size-s);
+  font-family: "Quicksand", sans-serif;
+  border: none;
+  border-radius: var(--border-radius-s);
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+}

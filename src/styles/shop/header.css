@@ -1,0 +1,157 @@
+@import url("//netdna.bootstrapcdn.com/font-awesome/4.0.3/css/font-awesome.min.css");
+
+/* Header */
+header {
+  display: flex;
+  flex-direction: column;
+  text-align: center;
+  background-position: center;
+  justify-content: center;
+  margin-bottom: 30px;
+}
+
+/* Slider */
+.slider-container {
+  position: relative;
+  width: 100%;
+  height: 400px;
+  overflow: hidden;
+  margin: auto;
+  border-radius: 0 0 var(--border-radius-s) var(--border-radius-s);
+  box-shadow: 0 4px 12px rgba(33, 33, 33, 0.2);
+}
+
+.slider {
+  display: flex;
+  transition: transform 0.5s ease-in-out;
+  height: 100%;
+}
+
+.slide {
+  min-width: 100%;
+  height: 100%;
+  background-size: cover;
+  background-position: center;
+  position: relative;
+  flex-shrink: 0;
+}
+
+header .text {
+  position: absolute;
+  right: 100px;
+  top: 50%; 
+  color: var(--50);
+  font-size: var(--font-size-xxl);
+  font-weight: var(--font-weight-bold);
+  text-shadow: 0 0 5px rgb(33, 33, 33, 0.6);
+  opacity: 0; 
+  transform: translateY(-50%);
+  transition: all 0.5s ease-in-out;
+}
+
+.slide.active .text {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+.change-slide button {
+  position: absolute;
+  width: 40px;
+  height: 40px;
+  top: 50%;
+  transform: translateY(-50%);
+  background: rgba(33, 33, 33, 0.4);
+  color: var(--50);
+  border: none;
+  font-size: var(--font-size-m);
+  padding: auto;
+  cursor: pointer;
+  border-radius: var(--border-radius-circle);
+  z-index: 1;
+  transition: background 0.3s;
+}
+
+#prev {
+  left: 15px;
+}
+
+#next {
+  right: 15px;
+}
+
+.change-slide button:hover {
+  background: rgba(33, 33, 33, 0.7);
+}
+
+/* Header Description */
+header .description {
+  display: block;
+  padding: 20px;
+  border-radius: var(--border-radius-s);
+  display: flex;
+  flex-direction: column;
+  width: fit-content;
+  margin: auto;
+}
+
+header .description h1 {
+  font-size: var(--font-size-xxxl);
+}
+
+header .description p {
+  font-size: var(--font-size-l);
+}
+
+/* Product */
+.product-card {
+  border: 1px solid #eee;
+  border-radius: 8px;
+  padding: 16px;
+  font-family: sans-serif;
+  box-shadow: 0 2px 6px rgba(0,0,0,0.1);
+}
+
+.product-image {
+  width: 100%;
+  border-radius: 6px;
+  object-fit: cover;
+}
+
+.product-price .from-text {
+  color: #888;
+  font-size: 14px;
+}
+.product-price .price {
+  color: #e67e22;
+  font-size: 20px;
+  font-weight: bold;
+}
+
+.product-name {
+  font-size: 16px;
+  margin: 6px 0;
+  font-weight: 600;
+}
+
+.product-category,
+.product-location,
+.product-size,
+.product-stock,
+.product-rating {
+  font-size: 13px;
+  color: #555;
+  margin-bottom: 4px;
+}
+
+.product-tags {
+  margin-top: 6px;
+}
+.product-tags .tag {
+  background-color: #16a085;
+  color: white;
+  font-size: 11px;
+  padding: 4px 6px;
+  border-radius: 4px;
+  margin-right: 4px;
+}
+
