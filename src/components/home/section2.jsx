@@ -44,7 +44,7 @@ const Section2 = () => {
                     <div className="section-content-2-box-2">
                         <div className="section-content-2-box-mini">
                             <img
-                        src="../../assets/birds-nest-plant-beige-pot-removebg-preview.png"
+                        src="/src/assets/birds-nest-plant-beige-pot-removebg-preview.png"
                         alt=""
                         className="images"
                         />
@@ -66,7 +66,7 @@ const Section2 = () => {
                     <div className="section-content-2-box-2">
                         <div className="section-content-2-box-mini">
                             <img
-                                src="../../assets/birds-nest-plant-beige-pot-removebg-preview.png"
+                                src="/src/assets/fiddle-leaf-fig-plant-pot-removebg-preview.png"
                                 alt=""
                                 className="images"
                             />
