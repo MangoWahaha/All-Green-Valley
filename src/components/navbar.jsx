@@ -1,5 +1,7 @@
 import { useEffect, useRef } from "react";
 import '../components/styles/navbar.css'
+import { Link } from 'react-router-dom';
+import Header from "./home/header";
 //navbar & header combined
 
 const Navbar = () => {
@@ -31,7 +33,7 @@ const Navbar = () => {
         //     if (SectionOne) {
         //         SectionOneObserver.unobserve(SectionOne);
         //     }
-        //     };
+        // };
     }, []);
 
     return (
@@ -43,36 +45,25 @@ const Navbar = () => {
                 <a href="#logo">All Green Valley</a>
             </div>
             <div className="navbar-nav">
-                <a href="#">Home</a>
-                <a href="#shop">Shop</a>
-                <a href="#about">About Us</a>
+                <Link to="/">Home</Link>
+                <Link to="/shop">Shop</Link>
+                <Link to="/about">About Us</Link>
             </div>
             <div className="navbar-nav-nav">
                 <div className="navbar-search">
                     <i className="fa-solid fa-magnifying-glass" />
                     <input type="text" className="input-search" placeholder="Search" />
                 </div>
-                <a href="#cart">
+                <Link to="/cart">
                     <i className="fa-solid fa-bag-shopping" />
-                </a>
-                <a href="#profile">
+                </Link>
+                <Link to="/login">
                     <i className="fa-solid fa-user" />
-                </a>
+                </Link>
             </div>
         </nav>
      {/* Header */}
-        <header ref={headerRef}>
-            <div className="header-description">
-                <h1 className="header-title">Make Your Home a Greener Place</h1>
-                <p className="header-paragraph">
-                    Discover the beauty and benefits of ornamental plants to brighten your
-                    space and refresh your home.
-                </p>
-                <button className="cta-button">
-                    Shop now <i className="fa-solid fa-arrow-up" />
-                </button>
-            </div>
-        </header>
+      <Header ref={headerRef}/>
     </>
     );
 }
