@@ -1,8 +1,21 @@
 import { Link } from "react-router-dom";
 import "../styles/navbar.css";
 import Logo from "../assets/Logo.png";
+import { useNavigate } from "react-router-dom";
+import { useEffect } from "react";
 
 function NavBar() {
+  const navigate = useNavigate();
+
+  const handleUserClick = () => {
+    const token = localStorage.getItem("usertoken");
+    if (token) {
+      navigate("/profile");
+    } else {
+      navigate("/auth");
+    }
+  };
+
   return (
     <nav className="navbar">
       <div className="navbar-brand">
@@ -21,12 +34,16 @@ function NavBar() {
           <i className="fa-solid fa-magnifying-glass"></i>
           <input type="text" className="search-input" placeholder="Search" />
         </div>
-        <a href="#cart">
+
+        <Link to="#cart">
           <i className="fa-solid fa-bag-shopping"></i>
-        </a>
-        <a href="#profile">
-          <i className="fa-solid fa-user"></i>
-        </a>
+        </Link>
+
+        <i
+          className="fa-solid fa-user"
+          onClick={handleUserClick}
+          style={{ cursor: "pointer" }}
+        ></i>
       </div>
     </nav>
   );

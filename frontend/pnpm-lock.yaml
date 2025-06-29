@@ -14,12 +14,9 @@ importers:
       react-dom:
         specifier: ^19.1.0
         version: 19.1.0(react@19.1.0)
-<<<<<<< HEAD
-=======
       react-router-dom:
         specifier: ^7.6.2
         version: 7.6.2(react-dom@19.1.0(react@19.1.0))(react@19.1.0)
->>>>>>> 9b4f6004618d26da07b9c70ba46193e6751f35ad
     devDependencies:
       '@eslint/js':
         specifier: ^9.25.0
@@ -32,11 +29,7 @@ importers:
         version: 19.1.6(@types/react@19.1.8)
       '@vitejs/plugin-react':
         specifier: ^4.4.1
-<<<<<<< HEAD
         version: 4.6.0(vite@6.3.5)
-=======
-        version: 4.5.2(vite@6.3.5)
->>>>>>> 9b4f6004618d26da07b9c70ba46193e6751f35ad
       eslint:
         specifier: ^9.25.0
         version: 9.29.0
@@ -368,13 +361,8 @@ packages:
   '@jridgewell/trace-mapping@0.3.25':
     resolution: {integrity: sha512-vNk6aEwybGtawWmy/PzwnGDOjCkLWSD2wqvjGGAgOAwCGWySYXfYoxt00IJkTF+8Lb57DwOb3Aa0o9CApepiYQ==}
 
-<<<<<<< HEAD
   '@rolldown/pluginutils@1.0.0-beta.19':
     resolution: {integrity: sha512-3FL3mnMbPu0muGOCaKAhhFEYmqv9eTfPSJRJmANrCwtgK8VuxpsZDGK+m0LYAGoyO8+0j5uRe4PeyPDK1yA/hA==}
-=======
-  '@rolldown/pluginutils@1.0.0-beta.11':
-    resolution: {integrity: sha512-L/gAA/hyCSuzTF1ftlzUSI/IKr2POHsv1Dd78GfqkR83KMNuswWD61JxGV2L7nRwBBBSDr6R1gCkdTmoN7W4ag==}
->>>>>>> 9b4f6004618d26da07b9c70ba46193e6751f35ad
 
   '@rollup/rollup-android-arm-eabi@4.44.0':
     resolution: {integrity: sha512-xEiEE5oDW6tK4jXCAyliuntGR+amEMO7HLtdSshVuhFnKTYoeYMyXQK7pLouAJJj5KHdwdn87bfHAR2nSdNAUA==}
@@ -502,13 +490,8 @@ packages:
   '@types/react@19.1.8':
     resolution: {integrity: sha512-AwAfQ2Wa5bCx9WP8nZL2uMZWod7J7/JSplxbTmBQ5ms6QpqNYm672H0Vu9ZVKVngQ+ii4R/byguVEUZQyeg44g==}
 
-<<<<<<< HEAD
   '@vitejs/plugin-react@4.6.0':
     resolution: {integrity: sha512-5Kgff+m8e2PB+9j51eGHEpn5kUzRKH2Ry0qGoe8ItJg7pqnkPrYPkDQZGgGmTa0EGarHrkjLvOdU3b1fzI8otQ==}
-=======
-  '@vitejs/plugin-react@4.5.2':
-    resolution: {integrity: sha512-QNVT3/Lxx99nMQWJWF7K4N6apUEuT0KlZA3mx/mVaoGj3smm/8rc8ezz15J1pcbcjDK0V15rpHetVfya08r76Q==}
->>>>>>> 9b4f6004618d26da07b9c70ba46193e6751f35ad
     engines: {node: ^14.18.0 || >=16.0.0}
     peerDependencies:
       vite: ^4.2.0 || ^5.0.0 || ^6.0.0 || ^7.0.0-beta.0
@@ -568,13 +551,10 @@ packages:
   convert-source-map@2.0.0:
     resolution: {integrity: sha512-Kvp459HrV2FEJ1CAsi1Ku+MY3kasH19TFykTz2xWmMeq6bk2NU3XXvfJ+Q61m0xktWwt+1HSYf3JZsTms3aRJg==}
 
-<<<<<<< HEAD
-=======
   cookie@1.0.2:
     resolution: {integrity: sha512-9Kr/j4O16ISv8zBBhJoi4bXOYNTkFLOqSL3UDB0njXxCXNezjeyVrJyGOWtgfs/q2km1gwBcfH8q1yEGoMYunA==}
     engines: {node: '>=18'}
 
->>>>>>> 9b4f6004618d26da07b9c70ba46193e6751f35ad
   cross-spawn@7.0.6:
     resolution: {integrity: sha512-uV2QOWP2nWzsy2aMp8aRibhi9dlzF5Hgh5SHaB9OiTGEyDTiJJyx0uy51QXdyWbtAHNua4XJzUKca3OzKUd3vA==}
     engines: {node: '>= 8'}
@@ -859,8 +839,6 @@ packages:
     resolution: {integrity: sha512-z6F7K9bV85EfseRCp2bzrpyQ0Gkw1uLoCel9XBVWPg/TjRj94SkJzUTGfOa4bs7iJvBWtQG0Wq7wnI0syw3EBQ==}
     engines: {node: '>=0.10.0'}
 
-<<<<<<< HEAD
-=======
   react-router-dom@7.6.2:
     resolution: {integrity: sha512-Q8zb6VlTbdYKK5JJBLQEN06oTUa/RAbG/oQS1auK1I0TbJOXktqm+QENEVJU6QvWynlXPRBXI3fiOQcSEA78rA==}
     engines: {node: '>=20.0.0'}
@@ -878,7 +856,6 @@ packages:
       react-dom:
         optional: true
 
->>>>>>> 9b4f6004618d26da07b9c70ba46193e6751f35ad
   react@19.1.0:
     resolution: {integrity: sha512-FS+XFBNvn3GTAWq26joslQgWNoFu08F4kl0J4CgdNKADkdSGXQyTCnKteIAJy96Br6YbpEU1LSzV5dYtjMkMDg==}
     engines: {node: '>=0.10.0'}
@@ -899,12 +876,9 @@ packages:
     resolution: {integrity: sha512-BR7VvDCVHO+q2xBEWskxS6DJE1qRnb7DxzUrogb71CWoSficBxYsiAGd+Kl0mmq/MprG9yArRkyrQxTO6XjMzA==}
     hasBin: true
 
-<<<<<<< HEAD
-=======
   set-cookie-parser@2.7.1:
     resolution: {integrity: sha512-IOc8uWeOZgnb3ptbCURJWNjWUPcO3ZnTTdzsurqERrP6nPyv+paC55vJM0LpOlT2ne+Ix+9+CRG1MNLlyZ4GjQ==}
 
->>>>>>> 9b4f6004618d26da07b9c70ba46193e6751f35ad
   shebang-command@2.0.0:
     resolution: {integrity: sha512-kHxr2zZpYtdmrN1qDjrrX/Z1rR1kG8Dx+gkpK1G4eXmvXswmcE1hTWBWYUzlraYw1/yZp6YuDY77YtvbN0dmDA==}
     engines: {node: '>=8'}
@@ -1268,11 +1242,7 @@ snapshots:
       '@jridgewell/resolve-uri': 3.1.2
       '@jridgewell/sourcemap-codec': 1.5.0
 
-<<<<<<< HEAD
   '@rolldown/pluginutils@1.0.0-beta.19': {}
-=======
-  '@rolldown/pluginutils@1.0.0-beta.11': {}
->>>>>>> 9b4f6004618d26da07b9c70ba46193e6751f35ad
 
   '@rollup/rollup-android-arm-eabi@4.44.0':
     optional: true
@@ -1367,20 +1337,12 @@ snapshots:
     dependencies:
       csstype: 3.1.3
 
-<<<<<<< HEAD
   '@vitejs/plugin-react@4.6.0(vite@6.3.5)':
-=======
-  '@vitejs/plugin-react@4.5.2(vite@6.3.5)':
->>>>>>> 9b4f6004618d26da07b9c70ba46193e6751f35ad
     dependencies:
       '@babel/core': 7.27.4
       '@babel/plugin-transform-react-jsx-self': 7.27.1(@babel/core@7.27.4)
       '@babel/plugin-transform-react-jsx-source': 7.27.1(@babel/core@7.27.4)
-<<<<<<< HEAD
       '@rolldown/pluginutils': 1.0.0-beta.19
-=======
-      '@rolldown/pluginutils': 1.0.0-beta.11
->>>>>>> 9b4f6004618d26da07b9c70ba46193e6751f35ad
       '@types/babel__core': 7.20.5
       react-refresh: 0.17.0
       vite: 6.3.5
@@ -1439,11 +1401,8 @@ snapshots:
 
   convert-source-map@2.0.0: {}
 
-<<<<<<< HEAD
-=======
   cookie@1.0.2: {}
 
->>>>>>> 9b4f6004618d26da07b9c70ba46193e6751f35ad
   cross-spawn@7.0.6:
     dependencies:
       path-key: 3.1.1
@@ -1720,8 +1679,6 @@ snapshots:
 
   react-refresh@0.17.0: {}
 
-<<<<<<< HEAD
-=======
   react-router-dom@7.6.2(react-dom@19.1.0(react@19.1.0))(react@19.1.0):
     dependencies:
       react: 19.1.0
@@ -1736,7 +1693,6 @@ snapshots:
     optionalDependencies:
       react-dom: 19.1.0(react@19.1.0)
 
->>>>>>> 9b4f6004618d26da07b9c70ba46193e6751f35ad
   react@19.1.0: {}
 
   resolve-from@4.0.0: {}
@@ -1771,11 +1727,8 @@ snapshots:
 
   semver@6.3.1: {}
 
-<<<<<<< HEAD
-=======
   set-cookie-parser@2.7.1: {}
 
->>>>>>> 9b4f6004618d26da07b9c70ba46193e6751f35ad
   shebang-command@2.0.0:
     dependencies:
       shebang-regex: 3.0.0
