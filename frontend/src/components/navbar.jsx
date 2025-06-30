@@ -2,7 +2,7 @@
 import { useEffect, useRef } from "react";
 import '../components/styles/navbar.css'
 import { Link } from 'react-router-dom';
-import Header from "./home/header";
+import Header from "./home/header"
 //navbar & header combined
 
 const Navbar = () => {
