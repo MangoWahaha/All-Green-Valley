@@ -146,9 +146,16 @@
   border: 2px solid var(--300);
   text-transform: uppercase;
   cursor: pointer;
+  position: relative;
+  text-align: center;
 }
 
 .google-account i {
+  position: absolute;
+  left: 13px;
+  top: 50%;
+  transform: translateY(-50%);
+
     margin-right: 10px;
 }
 
