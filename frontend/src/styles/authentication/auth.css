@@ -1,0 +1,251 @@
+.auth {
+  background: var(--200);
+  color: var(--900);
+  height: 100vh;
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+}
+
+.auth-form {
+  background: var(--50);
+  border-radius: var(--border-radius-m);
+  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.35);
+  position: relative;
+  display: flex;
+  overflow: hidden;
+  width: 790px;
+  max-width: 100%;
+  min-height: 480px;
+}
+
+.auth-form p {
+  font-size: var(--font-size-n);
+  line-height: 20px;
+  letter-spacing: 0.3px;
+  margin: 20px 0;
+}
+
+.auth-form span {
+  font-size: var(--font-size-s);
+}
+
+.auth-form a {
+  color: var(--600);
+  font-size: var(--font-size-s);
+  text-decoration: none;
+  margin: 15px 0 10px;
+}
+
+.auth-form button {
+  background: var(--primary);
+  color: var(--50);
+  font-size: var(--font-size-s);
+  padding: 10px 45px;
+  border-radius: var(--border-radius-s);
+  border: 1px solid transparent;
+  font-weight: var(--font-weight-semibold);
+  letter-spacing: 0.5px;
+  text-transform: uppercase;
+  margin-top: 10px;
+  cursor: pointer;
+}
+
+.auth-form button.hidden {
+  background: transparent;
+  border-color: var(--50);
+}
+
+.auth-form form {
+  background: var(--50);
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  height: 100%;
+  padding: 0 40px;
+  align-items: center;
+}
+
+.auth-form input {
+  background: var(--300);
+  border: none;
+  margin: 8px 0;
+  padding: 10px 15px;
+  font-size: var(--font-size-s);
+  border-radius: var(--border-radius-s);
+  width: 100%;
+  outline: none;
+}
+
+.form {
+  position: absolute;
+  top: 0;
+  height: 100%;
+  transition: all 0.6s ease-in-out;
+}
+
+.sign-in {
+  left: 0;
+  width: 50%;
+  z-index: 2;
+}
+
+.auth-form.active .sign-in {
+  transform: translateX(100%);
+  opacity: 0;
+  z-index: 1;
+  animation: left 0.6s;
+}
+
+.sign-up {
+  left: 0;
+  width: 50%;
+  opacity: 0;
+  z-index: 1;
+}
+
+.auth-form.active .sign-up {
+  transform: translateX(100%);
+  opacity: 1;
+  z-index: 2;
+  animation: right 0.6s;
+}
+
+@keyframes right {
+  0%,
+  49.99% {
+    opacity: 0;
+    z-index: 1;
+  }
+  50%,100% {
+    opacity: 1;
+    z-index: 2;
+  }
+}
+
+@keyframes left {
+  0%,
+  49.99% {
+    opacity: 1;
+    z-index: 2;
+  }
+  50%,100% {
+    opacity: 0;
+    z-index: 1;
+  }
+}
+
+.google-account {
+  margin: 20px 0;
+  color: var(--50);
+  width: 100%;
+  padding: 10px 20px;
+  border-radius: var(--border-radius-s);
+  border: 2px solid var(--300);
+  text-transform: uppercase;
+  cursor: pointer;
+  position: relative;
+  text-align: center;
+}
+
+.google-account i {
+  position: absolute;
+  left: 13px;
+  top: 50%;
+  transform: translateY(-50%);
+
+    margin-right: 10px;
+}
+
+.google-account a {
+  letter-spacing: 0.5px;
+  font-size: var(--font-size-s);
+  color: var(--900);
+  font-weight: var(--font-weight-semibold);
+}
+
+.switch-container {
+  position: absolute;
+  top: 0;
+  left: 50%;
+  width: 50%;
+  height: 100%;
+  overflow: hidden;
+  transition: all 0.6s ease-in-out;
+  border-radius: var(--border-radius-m) 0 0 var(--border-radius-m);
+  z-index: 9999;
+}
+
+.auth-form.active .switch-container {
+  transform: translateX(-100%);
+  border-radius: 0 var(--border-radius-m) var(--border-radius-m) 0;
+}
+
+.auth-switch {
+  background: linear-gradient(90deg, var(--primary), var(--secondary));
+  color: var(--50);
+  height: 100%;
+  position: relative;
+  left: -100%;
+  height: 100%;
+  width: 200%;
+  transform: translateX(0);
+  transition: all 0.6s ease-in-out;
+}
+
+.auth-form.active .auth-switch {
+  transform: translateX(50%);
+}
+
+.switch {
+  position: absolute;
+  width: 50%;
+  height: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  padding: 0 30px;
+  text-align: center;
+  top: 0;
+  transform: translateX(0);
+  transition: all 0.6s ease-in-out;
+}
+
+.auth-left {
+  transform: translateX(-200%);
+}
+
+.auth-form.active .auth-left {
+  transform: translateX(0);
+}
+
+.auth-right {
+  right: 0;
+  transform: translateX(0);
+}
+
+.auth-form.active .auth-right {
+  transform: translateX(200%);
+}
+
+.password {
+  position: relative;
+  width: 100%;
+}
+
+.password input {
+  width: 100%;
+  padding-right: 40px;
+}
+
+.password i {
+  position: absolute;
+  right: 10px;
+  top: 50%;
+  transform: translateY(-50%);
+  cursor: pointer;
+  color: var(--900);
+}

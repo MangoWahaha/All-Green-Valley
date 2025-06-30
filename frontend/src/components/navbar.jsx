@@ -1,3 +1,4 @@
+
 import { useEffect, useRef } from "react";
 import '../components/styles/navbar.css'
 import { Link } from 'react-router-dom';
@@ -36,6 +37,7 @@ const Navbar = () => {
         // };
     }, []);
 
+
     return (
         <>
         {/* Navbar */}
@@ -67,7 +69,5 @@ const Navbar = () => {
     </>
     );
 }
-
-
 
 export default Navbar;
