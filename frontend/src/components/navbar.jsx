@@ -1,52 +1,73 @@
-import { Link } from "react-router-dom";
-import "../styles/navbar.css";
-import Logo from "../assets/Logo.png";
-import { useNavigate } from "react-router-dom";
-import { useEffect } from "react";
 
-function NavBar() {
-  const navigate = useNavigate();
+import { useEffect, useRef } from "react";
+import '../components/styles/navbar.css'
+import { Link } from 'react-router-dom';
+import Header from "./home/header";
+//navbar & header combined
 
-  const handleUserClick = () => {
-    const token = localStorage.getItem("usertoken");
-    if (token) {
-      navigate("/profile");
-    } else {
-      navigate("/auth");
-    }
-  };
+const Navbar = () => {
+    const navbarRef = useRef(null);
+    const headerRef = useRef(null);
+    //null is for make it empty first
+    useEffect (() => {
+        const navbar = navbarRef.current;
+        const SectionOne = headerRef.current;
 
-  return (
-    <nav className="navbar">
-      <div className="navbar-brand">
-        <img src={Logo} alt="Logo" />
-        <a href="#logo">All Green Valley</a>
-      </div>
+        const SectionOneOptions = {
+            rootMargin: "-200px 0px 0px 0px"
+        };
+        const SectionOneObserver = new IntersectionObserver(function(entries) {
+        entries.forEach((entry) => {
+            console.log(entry.target);
+            if(!entry.isIntersecting) {
+                navbar.classList.add("navbar-scrolldown");
+            } else {
+                navbar.classList.remove("navbar-scrolldown");
+            }
+        });
+        //c
+    }, SectionOneOptions);
+        if (SectionOne) {
+            SectionOneObserver.observe(SectionOne);
+        }
+        // return () => {
+        //     if (SectionOne) {
+        //         SectionOneObserver.unobserve(SectionOne);
+        //     }
+        // };
+    }, []);
 
-      <div className="navbar-nav">
-        <Link to="/">Beranda</Link>
-        <Link to="/shop">Tanaman</Link>
-        <Link to="/about">Tentang Kami</Link>
-      </div>
 
-      <div className="navbar-nav-nav">
-        <div className="navbar-search">
-          <i className="fa-solid fa-magnifying-glass"></i>
-          <input type="text" className="search-input" placeholder="Search" />
-        </div>
-
-        <Link to="#cart">
-          <i className="fa-solid fa-bag-shopping"></i>
-        </Link>
-
-        <i
-          className="fa-solid fa-user"
-          onClick={handleUserClick}
-          style={{ cursor: "pointer" }}
-        ></i>
-      </div>
-    </nav>
-  );
+    return (
+        <>
+        {/* Navbar */}
+        <nav className="navbar" ref={navbarRef}>
+            <div className="navbar-brand">
+                <img src="/src/assets/Logo.png" alt="Logo" />
+                <a href="#logo">All Green Valley</a>
+            </div>
+            <div className="navbar-nav">
+                <Link to="/">Home</Link>
+                <Link to="/shop">Shop</Link>
+                <Link to="/about">About Us</Link>
+            </div>
+            <div className="navbar-nav-nav">
+                <div className="navbar-search">
+                    <i className="fa-solid fa-magnifying-glass" />
+                    <input type="text" className="input-search" placeholder="Search" />
+                </div>
+                <Link to="/cart">
+                    <i className="fa-solid fa-bag-shopping" />
+                </Link>
+                <Link to="/login">
+                    <i className="fa-solid fa-user" />
+                </Link>
+            </div>
+        </nav>
+     {/* Header */}
+      <Header ref={headerRef}/>
+    </>
+    );
 }
 
-export default NavBar;
+export default Navbar;

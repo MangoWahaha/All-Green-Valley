@@ -1,0 +1,150 @@
+.section-content-2 {
+  padding: 120px 32px;
+  background-color: var(--100); 
+}
+
+.section-content-2-desc {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+  gap: 20px;
+  margin-bottom: 50px;
+}
+
+.section-content-2-desc-title {
+  font-size: var(--font-size-xxl);
+  color: var(--900);               
+  font-family: 'Playfair', sans-serif;
+  border-bottom: 2px solid var(--secondary);
+  padding-bottom: 5px;
+}
+
+.section-content-2-desc-para {
+  font-size: var(--font-size-s);
+  color: var(--900);
+  width: 70%;
+  max-width: 800px;
+}
+
+/* Swiper Container */
+.swiper {
+  width: 100%;
+}
+
+.swiper-wrapper {
+  /* display: flex; */
+  padding: 50px 0;
+}
+
+.section-content-2-box-2 {
+  /* padding: 20px 0px; */
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.section-content-2-box-2 .section-content-2-box-mini {
+    background-color: #fff;
+    border-radius: 10px;
+    padding: 20px 0px;
+    width: 350px;
+    height: 450px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+    display: inline-flex;
+    flex-direction: column;
+    gap: 10px;
+    align-items: center;
+    text-align: center; 
+    position: relative;
+    
+}
+
+.section-content-2-box-2 .section-content-2-box-mini .section-content-2-box-2-names {
+  font-size: var(--font-size-l);
+}
+
+.section-content-2-box-2 .section-content-2-box-mini .section-content-2-box-prices{
+    /* margin-top: 20px; */
+    display: inline-flex;
+    gap: 150px;
+    /* justify-content: space-between; */
+    align-items: end;
+    font-size: var(--font-size-l);
+    position: absolute;
+    margin-top: 350px;
+}
+
+.section-content-2-box-2 .section-content-2-box-mini .section-content-2-box-prices .price{
+  color: var(--primary);
+  font-weight: var(--font-weight-bold);
+  font-size: var(--font-size-xl);
+}
+
+
+
+.section-content-2-box-2 .section-content-2-box-mini .section-content-2-box-prices .add-shopping {
+  display: inline-flex;
+  gap: 10px;
+  align-items: center;
+  border: 1px solid var(--secondary);
+  padding: 5px;
+  border-radius: var(--border-radius-s);
+  width: 80px;
+  justify-content: center;
+  color: var(--secondary);
+  transition: 0.3s ease;
+  cursor: pointer;
+}
+
+.section-content-2-box-2 .section-content-2-box-mini .section-content-2-box-prices .add-shopping:hover {
+  background-color: var(--secondary);
+  color: var(--accent);
+  transition: 0.3s ease;
+  cursor: pointer;
+}
+
+/* .swiper-slide {
+  position: relative; 
+  
+} */
+
+/* Slide Content Box */
+/* .swiper-slide.section-content-2-box-2 {
+  transition: transform 0.3s ease;
+  transform: scale(0.84) translateZ(0);
+
+}
+
+.swiper-slide.swiper-slide-active.section-content-2-box-2 {
+  transform: scale(1.2);
+
+} */
+
+
+/* Image Styling */
+.swiper-slide .images {
+  width: 250px;
+  height: 250px;
+  object-fit: contain;
+}
+
+/* Nama Tanaman */
+.section-content-2-box-2-names {
+  font-size: 1rem;
+  font-weight: 600;
+  color: var(--900);
+  margin-top: 10px;
+}
+
+/* Swiper Navigation Buttons */
+.swiper-button-prev,
+.swiper-button-next {
+  color: #000;
+}
+
+.swiper-button-next::after,
+.swiper-button-prev::after {
+  color: var(--secondary); 
+
+}

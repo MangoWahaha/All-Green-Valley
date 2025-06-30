@@ -1,0 +1,116 @@
+/* Navigation Bar */
+.navbar{
+    display: flex;
+    align-items: center;
+    padding: 20px 32px;
+    z-index: 9999;
+    width: 100%;
+    justify-content: space-between;
+    position: fixed;
+    /* border-bottom: 1px solid var(--primary); */
+    color: var(--900);
+    font-weight: var(--font-weight-semibold);
+    transition: 0.2s ease;
+}
+
+.navbar-scrolldown {
+  background: var(--50);
+  box-shadow: 0 3px 20px rgba(0, 0, 0, 0.1);
+  transition: 0.2s ease;
+  
+}
+
+.navbar .navbar-brand {
+    display: inline-flex;
+    align-items: center;
+}
+
+.navbar .navbar-brand img{
+    width: 3rem;
+}
+
+.navbar .navbar-nav {
+    display: inline-flex;
+    gap: 50px;
+    
+}
+
+.navbar .navbar-nav-nav {
+    display: flex; 
+    gap: 20px;
+    align-items: center;
+    font-size: var(--font-size-m);
+}
+
+.navbar .navbar-nav-nav .navbar-search .fa-solid {
+    position: absolute;
+    z-index: 99;
+    padding: 12px 10px;
+    font-size: var(--font-size-s);
+}
+
+
+.navbar .navbar-nav-nav .navbar-search .input-search {
+    position: relative;
+    padding: 10px 30px;
+    border-radius: 10px;
+    border: none;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1) ;
+    font-size: var(--font-size-s);
+    font-family: 'Quicksand', sans-serif;
+}
+
+/* Header */
+header  {
+    display: flex;
+    height: 100%;
+    align-items: center;
+    padding: 0 32px;
+    background-image: url(/src/assets/plantheader1.jpg);
+    height: 100vh;
+    background-size: contain;
+    background-repeat: no-repeat;
+    background-position: right;
+}
+
+header .header-description .header-title {
+    font-size: var(--font-size-xxxl);
+    width: 70%;
+    font-family: 'Playfair',Arial, Helvetica, sans-serif;
+    font-weight: var(--font-weight-bold);
+}
+
+header .header-description {
+    display: inline-flex;
+    flex-direction: column;
+    /* border: 1px solid black; */
+    gap: 20px;
+}
+
+header .header-description .header-paragraph {
+    font-size: var(--font-size-m);
+    width: 70%;
+}
+
+header .header-description .cta-button {
+    width: 20%;
+    padding: 20px;
+    border: none;
+    border-radius: var(--border-radius-s);
+    background: var(--primary);
+    color: var(--accent);
+    font-size: var(--font-size-m);
+    font-weight: var(--font-weight-semibold);
+    cursor: pointer;
+    transition: 0.2s ease;
+}
+
+header .header-description .cta-button:hover {
+    background: var(--secondary);
+    transition: 0.2s ease;
+}
+
+header .header-description .cta-button i{
+    transform: rotate(45deg);
+    margin-left: 10px;
+}
