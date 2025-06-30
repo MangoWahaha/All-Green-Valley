@@ -12,10 +12,12 @@ const Login = () => {
             headers: {'Content-Type' : 'application/json'},
             body: JSON.stringify({name, email, password})
         });
-        const medata = await response.json()
+        const medata = await response.json()    
 
-        if (err) {
+        if (!response.ok) {
             console.error("failed to connect to database");
+        } else {
+            console.log(medata);
         }
     }
     return(

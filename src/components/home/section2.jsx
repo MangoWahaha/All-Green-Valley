@@ -6,6 +6,8 @@ import 'swiper/css';
 import 'swiper/css/effect-coverflow';
 import 'swiper/css/navigation';
 
+import pilea from '../../assets/andrew-reshetov-f8tr3-MJzhc-unsplash-removebg-preview.png'
+
 const Section2 = () => {
     return (
         <>
@@ -44,7 +46,7 @@ const Section2 = () => {
                     <div className="section-content-2-box-2">
                         <div className="section-content-2-box-mini">
                             <img
-                        src="/src/assets/birds-nest-plant-beige-pot-removebg-preview.png"
+                        src="/assets/birds-nest-plant-beige-pot-removebg-preview.png"
                         alt=""
                         className="images"
                         />
@@ -66,7 +68,7 @@ const Section2 = () => {
                     <div className="section-content-2-box-2">
                         <div className="section-content-2-box-mini">
                             <img
-                                src="/src/assets/fiddle-leaf-fig-plant-pot-removebg-preview.png"
+                                src="/assets/fiddle-leaf-fig-plant-pot-removebg-preview.png"
                                 alt=""
                                 className="images"
                             />
@@ -87,7 +89,7 @@ const Section2 = () => {
                     <div className="section-content-2-box-2">
                         <div className="section-content-2-box-mini">
                             <img
-                                src="/src/assets/faux-watermelon-peperomia-plant-terracotta-pot-home-decor-removebg-preview.png"
+                                src="/assets/faux-watermelon-peperomia-plant-terracotta-pot-home-decor-removebg-preview.png"
                                 alt=""
                                 className="images"
                             />
@@ -108,8 +110,8 @@ const Section2 = () => {
                     <div className="section-content-2-box-2">
                         <div className="section-content-2-box-mini">
                             <img
-                                src="/src/assets/andrew-reshetov-f8tr3-MJzhc-unsplash-removebg-preview.png"
-                                alt=""
+                                src={pilea}
+                                alt=""  
                                 className="images"
                             />
                             <h4 className="section-content-2-box-2-names">Tanaman Uang Cina</h4>
@@ -129,7 +131,7 @@ const Section2 = () => {
                     <div className="section-content-2-box-2">
                         <div className="section-content-2-box-mini">
                             <img
-                                src="/src/assets/stephanie-harvey-T0inbt7nRME-unsplash-removebg-preview.png"
+                                src="../../assets/stephanie-harvey-T0inbt7nRME-unsplash-removebg-preview.png"
                                 alt=""
                                 className="images"
                             />
@@ -150,7 +152,7 @@ const Section2 = () => {
                     <div className="section-content-2-box-2">
                         <div className="section-content-2-box-mini">
                             <img
-                                src="/src/assets/peace-lily-plant-terracotta-pot-home-decor-object-removebg-preview.png"
+                                src="/assets/peace-lily-plant-terracotta-pot-home-decor-object-removebg-preview.png"
                                 alt=""
                                 className="images"
                             />
