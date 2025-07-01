@@ -12,6 +12,9 @@
   /* border-bottom: 1px solid var(--primary); */
 }
 
+.navbar-scrolldown .whitening {
+  color: white !important;
+}
 .navbar-brand {
   display: flex;
   align-items: center;

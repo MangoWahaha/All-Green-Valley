@@ -1,5 +1,5 @@
 /* Header */
-header  {
+.home-header  {
     display: flex;
     height: 100%;
     align-items: center;
@@ -11,26 +11,26 @@ header  {
     background-position: right;
 }
 
-header .header-description .header-title {
+.home-header .header-description .header-title {
     font-size: var(--font-size-xxxl);
     width: 70%;
     font-family: 'Playfair',Arial, Helvetica, sans-serif;
     font-weight: var(--font-weight-bold);
 }
 
-header .header-description {
+.home-header .header-description {
     display: inline-flex;
     flex-direction: column;
     /* border: 1px solid black; */
     gap: 20px;
 }
 
-header .header-description .header-paragraph {
+.home-header .header-description .header-paragraph {
     font-size: var(--font-size-m);
     width: 70%;
 }
 
-header .header-description .cta-button {
+.home-header .header-description .cta-button {
     width: 20%;
     padding: 20px;
     border: none;
@@ -43,12 +43,12 @@ header .header-description .cta-button {
     transition: 0.2s ease;
 }
 
-header .header-description .cta-button:hover {
+.home-header .header-description .cta-button:hover {
     background: var(--secondary);
     transition: 0.2s ease;
 }
 
-header .header-description .cta-button i{
+.home-header .header-description .cta-button i{
     transform: rotate(45deg);
     margin-left: 10px;
 }

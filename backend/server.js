@@ -17,10 +17,10 @@ app.use('/', routesHandler);
 
 const PORT = 4000;
 
-app.use(express.static(path.join(__dirname, 'dist')));
+app.use(express.static(path.join(__dirname, '../frontend/dist')));
 
-app.get('/back', (req,res) => {
-    res.sendFile(path.join(__dirname, 'dist, 'index.html'))
+app.get('/auth', (req,res) => {
+    res.sendFile(path.join(__dirname, '../frontend/dist', '../frontend/index.html'))
 });
 
 

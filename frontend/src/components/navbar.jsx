@@ -1,21 +1,26 @@
-
 import { useEffect, useRef } from "react";
 import '../components/styles/navbar.css'
-import { Link } from 'react-router-dom';
+import { Link, useLocation } from 'react-router-dom';
 import Header from "./home/header"
+import Headerpage from './shop/headershop';
 //navbar & header combined
 
 const Navbar = () => {
     const navbarRef = useRef(null);
     const headerRef = useRef(null);
+    const locations = useLocation();
     //null is for make it empty first
+
     useEffect (() => {
         const navbar = navbarRef.current;
-        const SectionOne = headerRef.current;
+        const SectionOne = headerRef.current;   
 
         const SectionOneOptions = {
-            rootMargin: "-200px 0px 0px 0px"
+            rootMargin: "-200px 0px 0px 0px",
+            "/": "-200px 0px 0px 0px",
+            "/shop": "-100px 0px 0px 0px",
         };
+
         const SectionOneObserver = new IntersectionObserver(function(entries) {
         entries.forEach((entry) => {
             console.log(entry.target);
@@ -25,18 +30,32 @@ const Navbar = () => {
                 navbar.classList.remove("navbar-scrolldown");
             }
         });
-        //c
+        
     }, SectionOneOptions);
         if (SectionOne) {
             SectionOneObserver.observe(SectionOne);
-        }
-        // return () => {
-        //     if (SectionOne) {
-        //         SectionOneObserver.unobserve(SectionOne);
-        //     }
-        // };
-    }, []);
+        };
 
+        return () => {
+            if (SectionOne) {
+                SectionOneObserver.unobserve(SectionOne);
+            }
+        };
+    }, [locations.pathname]);
+
+    const navbarsrunning = () => {
+        if (locations.pathname === "/") {
+            return <Header ref={headerRef}/>;
+        } 
+        if (locations.pathname === "/shop") {
+            const colornavbar = document.querySelector('.navbar-scrolldown');
+            if (colornavbar) {
+                colornavbar.classList.add('whitening')
+            }
+            return <Headerpage ref={headerRef}/>;
+        }
+        return null;
+    }
 
     return (
         <>
@@ -59,13 +78,13 @@ const Navbar = () => {
                 <Link to="/cart">
                     <i className="fa-solid fa-bag-shopping" />
                 </Link>
-                <Link to="/login">
+                <Link to="/auth">
                     <i className="fa-solid fa-user" />
                 </Link>
             </div>
         </nav>
      {/* Header */}
-      <Header ref={headerRef}/>
+      {navbarsrunning()}
     </>
     );
 }

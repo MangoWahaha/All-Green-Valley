@@ -9,7 +9,7 @@ const db = mysql.createConnection({
     database: 'agv_project'
 });
 
-router.post('/login', async (req, res) => {
+router.post('/auth', async (req, res) => {
     const {name, email, password} = req.body;
     if (!name || !email || !password) {
         return res.status(400).json({error:'have to be required'})

@@ -19,30 +19,29 @@ function SignUp() {
   };
 
   const handleSubmit = async (e) => {
-    e.preventDefault();
+  e.preventDefault();
 
-    if (formData.password !== formData.confirmPassword) {
-      alert("Kata sandi tidak cocok!");
-      return;
-    }
+  if (formData.password !== formData.confirmPassword) {
+    alert("Kata sandi tidak cocok!");
+    return;
+  }
 
-    const data = new URLSearchParams();
-    data.append("name", formData.name);
-    data.append("email", formData.email);
-    data.append("password", formData.password);
+  const response = await fetch("/signup", {
+    method: "POST",
+    body: JSON.stringify({
+      name: formData.name,
+      email: formData.email,
+      password: formData.password,
+    }),
+    headers: {
+      "Content-Type": "application/json",
+    },
+  });
 
-    const response = await fetch("/signup", {
-      method: "POST",
-      body: data,
-      headers: {
-        "Content-Type": "application/x-www-form-urlencoded",
-      },
-    });
-
-    const result = await response.text();
-    alert(result);
-    setFormData({ name: "", email: "", password: "", confirmPassword: "" });
-  };
+  const result = await response.text();
+  alert(result);
+  setFormData({ name: "", email: "", password: "", confirmPassword: "" });
+};
 
   return (
     <div className="form sign-up">

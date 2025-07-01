@@ -1,7 +1,7 @@
 @import url("//netdna.bootstrapcdn.com/font-awesome/4.0.3/css/font-awesome.min.css");
 
 /* Header */
-header {
+.header-shop {
   display: flex;
   flex-direction: column;
   text-align: center;
@@ -36,7 +36,7 @@ header {
   flex-shrink: 0;
 }
 
-header .text {
+.header-shop .text {
   position: absolute;
   right: 100px;
   top: 50%; 
@@ -84,7 +84,7 @@ header .text {
 }
 
 /* Header Description */
-header .description {
+.header-shop .description {
   display: block;
   padding: 20px;
   border-radius: var(--border-radius-s);
@@ -94,11 +94,11 @@ header .description {
   margin: auto;
 }
 
-header .description h1 {
+.header-shop .description h1 {
   font-size: var(--font-size-xxxl);
 }
 
-header .description p {
+.header-shop .description p {
   font-size: var(--font-size-l);
 }
 
