@@ -14,7 +14,7 @@
 .home-header .header-description .header-title {
     font-size: var(--font-size-xxxl);
     width: 70%;
-    font-family: 'Playfair',Arial, Helvetica, sans-serif;
+    font-family: 'Playfair', sans-serif;
     font-weight: var(--font-weight-bold);
 }
 

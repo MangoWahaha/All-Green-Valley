@@ -1,4 +1,5 @@
 import '../styles/home/section3.css'
+import plants12 from '../../assets/plants12.png'
 
 const Section3 = () => {
     return (
@@ -6,7 +7,7 @@ const Section3 = () => {
             <section className="section-content-3">
                 <div className="section-content-3-emptybox">
                     {/* <img className="sample" src="/src/assets/pelipeli2.png" alt="sample" /> */}
-                    <img className="sample2" src="/src/assets/plants12.png" alt="sample2" />
+                    <img className="sample2" src={plants12} alt="sample2" />
                     </div>
                 <div className="section-content-3-pack">
                     <div className="section-content-3-desc">

@@ -13,15 +13,15 @@ const app = express();
 app.use(express.urlencoded({extended:false}));
 app.use(express.json());
 app.use(cors());
-app.use('/', routesHandler);
+app.use('/api', routesHandler);
 
 const PORT = 4000;
 
 app.use(express.static(path.join(__dirname, '../frontend/dist')));
 
-app.get('/auth', (req,res) => {
-    res.sendFile(path.join(__dirname, '../frontend/dist', '../frontend/index.html'))
-});
+app.get('*', (req,res) => {
+    res.sendFile(path.join(__dirname, '../frontend/dist/index.html'))
+}); 
 
 
 app.listen(PORT, () => {

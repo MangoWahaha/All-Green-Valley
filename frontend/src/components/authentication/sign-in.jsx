@@ -18,20 +18,46 @@ function SignIn() {
   const handleSubmit = async (e) => {
     e.preventDefault();
 
-    const data = new URLSearchParams();
-    data.append("email", formData.email);
-    data.append("password", formData.password);
+    // const data = new URLSearchParams();
+    // data.append("email", formData.email);
+    // data.append("password", formData.password);
 
-    const response = await fetch("/signin", {
-      method: "POST",
-      body: data,
-      headers: {
-        "Content-Type": "application/x-www-form-urlencoded",
-      },
-    });
+    // const response = await fetch("/api/login", {
+    //   method: "POST",
+    //   body: JSON.stringify({ // Stringify the formData object directly
+    //         email: formData.email,
+    //         password: formData.password,
+    //     }),
+    //   headers: {
+    //     "Content-Type": "application/json",
+    //   },
+    // });
 
-    const text = await response.text();
-    setMessage(text);
+    // const text = await response.json();
+    // setMessage(text);
+    try {
+      const response = await fetch("/api/login", {
+        method: "POST",
+        body: JSON.stringify({
+          email: formData.email,
+          password: formData.password
+        }),
+        headers: {
+          "Content-Type": "application/json",
+        },
+      });
+
+      const result = await response.json();
+
+      if (!response.ok) {
+        setMessage(result.message || "Login gagal");
+        return;
+      }
+      setMessage("Login berhasil!");
+    } catch (err) {
+      setMessage("Kesalahan dalam menghubungkan server");
+      console.error('Error during login:', err);
+  }
   };
 
   return (

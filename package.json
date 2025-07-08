@@ -1,0 +1,13 @@
+{
+	"dependencies": {
+		"bcrypt": "^6.0.0",
+		"path-to-regexp": "6.2.1"
+	},
+	"devDependencies": {
+		"concurrently": "^9.2.0"
+	},
+	"scripts": {
+  "start": "concurrently \"pnpm --dir backend run server\" \"pnpm --dir frontend start\""
+}
+
+}

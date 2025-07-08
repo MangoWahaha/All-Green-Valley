@@ -2,10 +2,10 @@
   "name": "backend",
   "version": "1.0.0",
   "type": "module",
-  "main": "handler.js",
+  "main": "server.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
-    "start": "node server.js"
+    "server": "node server.js"
   },
   "keywords": [],
   "author": "",
@@ -13,7 +13,8 @@
   "description": "",
   "dependencies": {
     "cors": "^2.8.5",
-    "express": "^5.1.0",
-    "mysql2": "^3.14.1"
+    "express": "^4.21.2",
+    "mysql2": "^3.14.1",
+    "path-to-regexp": "6.2.1"
   }
 }

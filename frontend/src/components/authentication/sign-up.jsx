@@ -26,7 +26,7 @@ function SignUp() {
     return;
   }
 
-  const response = await fetch("/signup", {
+  const response = await fetch("/api/auth", {
     method: "POST",
     body: JSON.stringify({
       name: formData.name,
@@ -38,7 +38,10 @@ function SignUp() {
     },
   });
 
-  const result = await response.text();
+  const result = await response.json();
+  if (response.ok) {
+    history.push('/home');
+  } 
   alert(result);
   setFormData({ name: "", email: "", password: "", confirmPassword: "" });
 };

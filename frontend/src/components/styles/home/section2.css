@@ -15,7 +15,7 @@
 .section-content-2-desc-title {
   font-size: var(--font-size-xxl);
   color: var(--900);               
-  font-family: 'Playfair', sans-serif;
+  font-family: 'Playfair Display', sans-serif;
   border-bottom: 2px solid var(--secondary);
   padding-bottom: 5px;
 }
@@ -26,6 +26,14 @@
   width: 70%;
   max-width: 800px;
 }
+
+.slider-container {
+   box-shadow: none !important;
+  border-radius: 0 !important;
+  background: transparent !important;
+  overflow: visible !important;
+}
+
 
 /* Swiper Container */
 .swiper {

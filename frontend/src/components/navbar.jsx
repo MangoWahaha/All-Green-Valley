@@ -3,6 +3,7 @@ import '../components/styles/navbar.css'
 import { Link, useLocation } from 'react-router-dom';
 import Header from "./home/header"
 import Headerpage from './shop/headershop';
+import logo from '../assets/Logo.png';
 //navbar & header combined
 
 const Navbar = () => {
@@ -62,7 +63,7 @@ const Navbar = () => {
         {/* Navbar */}
         <nav className="navbar" ref={navbarRef}>
             <div className="navbar-brand">
-                <img src="/src/assets/Logo.png" alt="Logo" />
+                <img src={logo} alt="Logo" />
                 <a href="#logo">All Green Valley</a>
             </div>
             <div className="navbar-nav">

@@ -7,6 +7,12 @@ import 'swiper/css/effect-coverflow';
 import 'swiper/css/navigation';
 
 import pilea from '../../assets/andrew-reshetov-f8tr3-MJzhc-unsplash-removebg-preview.png'
+import birdsnest from '../../assets/birds-nest-plant-beige-pot-removebg-preview.png'
+import fiddle from '../../assets/fiddle-leaf-fig-plant-pot-removebg-preview.png'
+import watermelon from '../../assets/faux-watermelon-peperomia-plant-terracotta-pot-home-decor-removebg-preview.png'
+import aloevera from '../../assets/stephanie-harvey-T0inbt7nRME-unsplash-removebg-preview.png'
+import birkin from '../../assets/peace-lily-plant-terracotta-pot-home-decor-object-removebg-preview.png'
+
 
 const Section2 = () => {
     return (
@@ -46,7 +52,7 @@ const Section2 = () => {
                     <div className="section-content-2-box-2">
                         <div className="section-content-2-box-mini">
                             <img
-                        src="/assets/birds-nest-plant-beige-pot-removebg-preview.png"
+                        src={birdsnest}
                         alt=""
                         className="images"
                         />
@@ -68,7 +74,7 @@ const Section2 = () => {
                     <div className="section-content-2-box-2">
                         <div className="section-content-2-box-mini">
                             <img
-                                src="/assets/fiddle-leaf-fig-plant-pot-removebg-preview.png"
+                                src={fiddle}
                                 alt=""
                                 className="images"
                             />
@@ -89,7 +95,7 @@ const Section2 = () => {
                     <div className="section-content-2-box-2">
                         <div className="section-content-2-box-mini">
                             <img
-                                src="/assets/faux-watermelon-peperomia-plant-terracotta-pot-home-decor-removebg-preview.png"
+                                src={watermelon}
                                 alt=""
                                 className="images"
                             />
@@ -131,7 +137,7 @@ const Section2 = () => {
                     <div className="section-content-2-box-2">
                         <div className="section-content-2-box-mini">
                             <img
-                                src="../../assets/stephanie-harvey-T0inbt7nRME-unsplash-removebg-preview.png"
+                                src={aloevera}
                                 alt=""
                                 className="images"
                             />
@@ -152,7 +158,7 @@ const Section2 = () => {
                     <div className="section-content-2-box-2">
                         <div className="section-content-2-box-mini">
                             <img
-                                src="/assets/peace-lily-plant-terracotta-pot-home-decor-object-removebg-preview.png"
+                                src={birkin}
                                 alt=""
                                 className="images"
                             />
@@ -162,7 +168,7 @@ const Section2 = () => {
                                  <p className='price'>$24</p>
                                 <div className='add-shopping'>
                                     <p className='plus'>+</p>
-                                    <i class="fa-solid fa-cart-shopping"></i>
+                                    <i className="fa-solid fa-cart-shopping"></i>
                                 </div>
                             </div>
                         </div>
