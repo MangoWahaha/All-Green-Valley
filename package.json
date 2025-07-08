@@ -4,10 +4,10 @@
 		"path-to-regexp": "6.2.1"
 	},
 	"devDependencies": {
-		"concurrently": "^9.2.0"
+		"concurrently": "^9.2.0",
+		"pre-commit": "^1.2.2"
 	},
 	"scripts": {
-  "start": "concurrently \"pnpm --dir backend run server\" \"pnpm --dir frontend start\""
-}
-
+		"start": "concurrently \"pnpm --dir backend run server\" \"pnpm --dir frontend start\""
+	}
 }
