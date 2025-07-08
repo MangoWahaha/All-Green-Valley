@@ -1,8 +1,10 @@
 import { useState } from "react";
+import { useNavigate } from 'react-router-dom'; 
 
 function SignUp() {
   const [showPassword, setShowPassword] = useState(false);
   const [showConfirm, setShowConfirm] = useState(false);
+  const navigate = useNavigate();
 
   const [formData, setFormData] = useState({
     name: "",
@@ -35,12 +37,15 @@ function SignUp() {
     }),
     headers: {
       "Content-Type": "application/json",
+      // "Authorization": `Bearer ${token}`,
     },
   });
 
   const result = await response.json();
   if (response.ok) {
-    history.push('/home');
+    localStorage.setItem("token", result.token);
+    console.log("TOKEN:", result.token);
+    navigate('/');
   } 
   alert(result);
   setFormData({ name: "", email: "", password: "", confirmPassword: "" });
@@ -104,3 +109,8 @@ function SignUp() {
 }
 
 export default SignUp;
+
+
+//port too muchhh :"D (do it in cmd)
+//netstat -ano | findstr :4000
+//taskkill /PID 12345 /F

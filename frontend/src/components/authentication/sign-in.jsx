@@ -1,7 +1,10 @@
 import { useState } from "react";
+import { useNavigate } from 'react-router-dom'; 
+
 
 function SignIn() {
   const [showPassword, setShowPassword] = useState(false);
+  const navigate = useNavigate();
   const [formData, setFormData] = useState({
     email: "",
     password: "",
@@ -54,6 +57,10 @@ function SignIn() {
         return;
       }
       setMessage("Login berhasil!");
+      localStorage.setItem("token", result.token);
+      console.log("TOKEN:", result.token);
+      navigate('/');
+
     } catch (err) {
       setMessage("Kesalahan dalam menghubungkan server");
       console.error('Error during login:', err);

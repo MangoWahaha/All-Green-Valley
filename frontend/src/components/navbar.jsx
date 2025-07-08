@@ -56,7 +56,8 @@ const Navbar = () => {
             return <Headerpage ref={headerRef}/>;
         }
         return null;
-    }
+    };
+
 
     return (
         <>
