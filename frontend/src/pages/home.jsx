@@ -5,7 +5,7 @@ import Section3 from '../components/home/section3.jsx'
 import Section4 from '../components/home/section4.jsx'
 import Footer from '../components/footer.jsx'
 import { useEffect, useState } from 'react'
-
+  
 function Home() {
   // const [count, setCount] = useState(0)
   const [_userdata, usersetdata] = useState(null);
